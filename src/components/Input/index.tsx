@@ -19,6 +19,7 @@ interface InputProps {
   onChange?: (e: any) => void;
   blockClassName?:string;
   readonly?:boolean;
+  defaultValue?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -34,6 +35,7 @@ const Input: React.FC<InputProps> = ({
   large = false,
   blockClassName,
   readonly,
+  defaultValue,
   ...rest
 }) => {
   const { t } = useTranslation("common");
@@ -52,6 +54,7 @@ const Input: React.FC<InputProps> = ({
           value={value}
           type={type}
           placeholder={placeholder}
+          defaultValue={defaultValue}
           className={`w-full rounded-[23px] bg-white p-[12px] outline-0 text-[18px] placeholder-[#2A3366]`}
           readOnly={readonly}
         />
@@ -72,6 +75,7 @@ const Input: React.FC<InputProps> = ({
         value={value}
         type={type}
         placeholder={placeholder}
+        defaultValue={defaultValue}
         className={`w-full rounded-[20px] bg-white p-[11px] outline-0 text-[16px] placeholder-[#2A3366]`}
         readOnly={readonly}
       />

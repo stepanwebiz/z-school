@@ -7,19 +7,19 @@ interface UserAvatarProps {
   height?: number;
   iconWidth?: number;
   iconHeight?: number;
-  user?: boolean;
   className?:string;
+  src?:string;
 }
 
 const UserAvatar: React.FC<UserAvatarProps> = ({
   width = 32,
   height = 32,
-  user,
   className,
+  src
 }) => {
   return (
     <Avatar sx={{ width, height }} className={`bg-[transparent] ${className}`}>
-      {user ? (
+      {!!src ? (
         <Image
           src={"/images/logo.png"}
           alt={"user"}

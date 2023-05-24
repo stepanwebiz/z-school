@@ -21,13 +21,13 @@ function App({ Component, pageProps, ...rest }: AppProps) {
   useEffect(() => {
     let userRole = localStorage.getItem("role");
 
-    if (router.pathname.includes("/teacher") && userRole !== "teacher") {
-      router.push(`/${userRole}/my-lessons`)
-    }
+    // if (router.pathname.includes("/teacher") && userRole !== "teacher") {
+    //   router.push(`/${userRole}/my-lessons`)
+    // }
     
-    if (router.pathname.includes("/student") && userRole !== "student") {
-      router.push(`/${userRole}/my-lessons`)
-    }
+    // if (router.pathname.includes("/student") && userRole !== "student") {
+    //   router.push(`/${userRole}/my-lessons`)
+    // }
 
   }, [router])
 
