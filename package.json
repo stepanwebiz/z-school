@@ -1,0 +1,49 @@
+{
+  "name": "z-school",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 8080",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn eslint --max-warnings=0",
+      "yarn prettier --write "
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.7",
+    "@next/font": "13.1.6",
+    "@types/node": "18.11.19",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "axios": "^1.4.0",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "formik": "^2.2.9",
+    "i18next": "^22.4.9",
+    "lint-staged": "^13.1.1",
+    "multiselect-react-dropdown": "^2.0.25",
+    "next": "13.1.6",
+    "next-i18next": "^13.1.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.1.5",
+    "symbol-observable": "^4.0.0",
+    "tailwindcss": "^3.2.6",
+    "typescript": "4.9.5",
+    "yup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4"
+  }
+}
