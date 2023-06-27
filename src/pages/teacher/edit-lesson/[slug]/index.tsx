@@ -16,7 +16,7 @@ type Employee = {
   [key: string]: string;
 };
 
-export default function AddLesson() {
+export default function EditLesson() {
   const router = useRouter();
   const { t } = useTranslation("common");
   const [recuringTimes, setRecuringTimes] = useState<string | null>(null);
@@ -64,28 +64,25 @@ export default function AddLesson() {
       grades: checkedGrades,
       recuring: !!recuringTimes,
       reacuring_value: recuringTimes,
-      student_ids: studentIds,
-      lesson_id:7100,
-      what_to_bring:null,
-      notes:null
+      student_ids: studentIds
     }
 
-    axios.post(
-      `${process.env.WEB_APP_DASHBOARD_URL}rest/createNewLesson/`, 
-      formData, 
-      {headers: {"content-type": "multipart/form-data"}}
-    )
-    .then((response) => {
-      console.log(response);
-    }).catch((error)=>{
-      console.log(error)
-    });
+    // axios.post(
+    //   `${process.env.WEB_APP_DASHBOARD_URL}rest/createNewLesson/`, 
+    //   formData, 
+    //   {headers: {"content-type": "multipart/form-data"}}
+    // )
+    // .then((response) => {
+    //   console.log(response);
+    // }).catch((error)=>{
+    //   console.log(error)
+    // });
   }
 
   return (
     <div className="w-full px-[20px] pb-[400px] flex justify-center bg-[#CFE9FD] overflowY-auto overflow-x-hidden relative lg:pb-[40px] lg:h-[unset]">
       <form onSubmit={(e) => handleSubmit(e)} className="w-full max-w-[1024px] h-full pt-[40px] relative lg:md:max-w-[470px] md:max-w-[340px] sm:max-w-[unset] lg:gap-[24px] lg:pt-[24px]">
-        <ScreenTitle text={t("Add Lesson")} />
+        <ScreenTitle text={t("Edit Lesson")} />
         <div className="max-w-[950px] mt-[48px] flex flex-col gap-[18px] lg:flex-wrap lg:mt-[32px] lg:relative lg:z-[2]">
           <div className="flex gap-[18px] lg:flex-wrap">
             <div className="flex flex-col lg:w-full">
@@ -185,7 +182,7 @@ export default function AddLesson() {
           dynamicweight={700}
           dynamicfontsize={18}
         >
-          {t("Add Lesson")}
+          {t("Edit Lesson")}
         </Button>
         <Image
           className="absolute w-[242px] h-[170px] top-[-20px] left-[50%] z-[1] translate-x-[-50%]"
